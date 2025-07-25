@@ -1,0 +1,16 @@
+(function(d) {
+	
+	const calls 	= document.getElementById('calls')
+	const botones 	= document.getElementById('calls__list');
+	var llamar 		= Array.prototype.slice.apply(document.querySelectorAll('.calls__link'));
+
+	calls.addEventListener('click', function() {
+		if (botones.classList.contains('calls--open')){
+			botones.classList.remove('calls--open');
+			botones.classList.add('calls--close');
+		} else {
+			botones.classList.remove('calls--close');
+			botones.classList.add('calls--open');
+		}
+	});
+})(document);
